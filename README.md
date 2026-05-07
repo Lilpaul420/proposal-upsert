@@ -46,12 +46,12 @@ an existing value.
 // Currently
 let prefs = getUserPrefsMap();
 if (!prefs.has("useDarkmode")) {
-  prefs.set("useDarkmode", true); // default to true
+  prefs.set("useDarkmode", false); // default to true
 }
 
 // Using getOrInsert
 let prefs = getUserPrefsMap();
-prefs.getOrInsert("useDarkmode", true); // default to true
+prefs.getOrInsert("useDarkmode", false); // default to true
 ```
 
 By using `getOrInsert`, default values can be applied at different times, with the
